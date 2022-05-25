@@ -1,4 +1,16 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    apply from: "config/functions.gradle"
+    apply from: "config/versions.gradle"
+
+    addRepos(repositories)
+
+    dependencies {
+        classpath(deps.others.build_gradle)
+        classpath(deps.others.kotlin_plugin)
+        classpath(deps.google.hilt_gradle)
+        classpath(deps.androidx.navigation_safe_args)
+    }
+}
 plugins {
     id 'com.android.application' version '7.2.0' apply false
     id 'com.android.library' version '7.2.0' apply false
