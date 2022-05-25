@@ -10,6 +10,12 @@ import com.arcode.eamovies.utils.constants.Constants.TABLE_NAME_DETAILS
 @Entity(
     tableName = TABLE_NAME_DETAILS,
     foreignKeys = [
+        ForeignKey(
+            entity = BelongsToCollectionsEntity::class,
+            parentColumns = ["id"],
+            childColumns = ["id"],
+            onDelete = ForeignKey.CASCADE
+        ),
         (ForeignKey(
             entity = GenreEntity::class,
             parentColumns = arrayOf("id"),
@@ -66,7 +72,7 @@ data class MovieDetailEntity(
     @ColumnInfo(name = "id") val id: Int? = null,
     @ColumnInfo(name = "adult") val adult: Boolean,
     @ColumnInfo(name = "backdropPath") val backdropPath: String,
-    @ColumnInfo(name = "belongsToCollection") val belongsToCollection: Any,
+    @ColumnInfo(name = "belongsToCollection") val belongsToCollection: List<BelongsToCollectionsEntity>? = null,
     @ColumnInfo(name = "budget") val budget: Int,
     @ColumnInfo(name = "genres") val genres: List<GenreEntity>,
     @ColumnInfo(name = "homepage") val homepage: String,

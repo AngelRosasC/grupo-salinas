@@ -8,6 +8,7 @@ import com.arcode.eamovies.data.database.model.*
 import com.arcode.eamovies.utils.constants.Constants.DATABASE_VERSION
 import com.arcode.eamovies.utils.converters.IntegerListConverter
 import com.arcode.eamovies.utils.converters.DateConverter
+import com.arcode.eamovies.utils.converters.ModelConverter
 
 
 @Database(
@@ -25,13 +26,15 @@ import com.arcode.eamovies.utils.converters.DateConverter
         AuthorDetailsEntity::class,
         YoutubeEntity::class,
         ResultVideoEntity::class,
+        BelongsToCollectionsEntity::class
     ],
     version = DATABASE_VERSION,
     exportSchema = false
 )
 @TypeConverters(
     IntegerListConverter::class,
-    DateConverter::class
+    DateConverter::class,
+    ModelConverter::class
 )
 abstract class DatabaseApp : RoomDatabase() {
     abstract fun apiDao(): DatabaseDao

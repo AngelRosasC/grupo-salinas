@@ -4,14 +4,14 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
-import com.arcode.eamovies.data.network.model.ResultReview
+
 import com.arcode.eamovies.utils.constants.Constants
 
 @Entity(
     tableName = Constants.TABLE_NAME_REVIEWS,
     foreignKeys = [
         (ForeignKey(
-            entity = ResultReview::class,
+            entity = ResultReviewEntity::class,
             parentColumns = ["id"],
             childColumns = ["id"],
             onDelete = ForeignKey.CASCADE

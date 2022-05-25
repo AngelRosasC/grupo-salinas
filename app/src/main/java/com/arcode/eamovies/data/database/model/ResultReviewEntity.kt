@@ -6,11 +6,12 @@ import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 import com.arcode.eamovies.utils.constants.Constants
 
-@Entity(tableName = Constants.TABLE_NAME_RESULT_REVIEW,
+@Entity(
+    tableName = Constants.TABLE_NAME_RESULT_REVIEW,
     foreignKeys = [
         (ForeignKey(entity = AuthorDetailsEntity::class,
             parentColumns = ["id"],
-            childColumns = ["movie_id"],
+            childColumns = ["id"],
             onDelete = ForeignKey.CASCADE))
     ]
 )

@@ -16,7 +16,7 @@ data class MovieEntity(
     @ColumnInfo(name = "voteCount") val voteCount: Int,
     @ColumnInfo(name = "voteAverage") val voteAverage: Double,
     @ColumnInfo(name = "posterPath") val posterPath: String,
-    @ColumnInfo(name = "isNowPlaying") val nowPlaying: Boolean,
+    @ColumnInfo(name = "isNowPlaying") val nowPlaying: Boolean? = false,
 )
 
 fun Movie.toDatabase(nowPlaying: Boolean? = false) = MovieEntity(

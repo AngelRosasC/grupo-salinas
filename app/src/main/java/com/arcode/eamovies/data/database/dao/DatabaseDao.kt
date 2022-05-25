@@ -31,6 +31,4 @@ interface DatabaseDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertMovieDetail(movie: MovieDetailEntity)
 
-    @Query("SELECT * FROM $TABLE_NAME_MOVIES WHERE movie_id = :movieId")
-    suspend fun getMovieDetailById(movieId: Int): MovieDetailEntity?
 }
