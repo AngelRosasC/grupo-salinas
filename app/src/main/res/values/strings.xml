@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EAMovies</string>
+
+    <!-- Navigation title -->
+    <string name="title_movies">Peliculas</string>
+    <string name="title_series">Series</string>
+
+    <!-- Backpressed -->
+    <string name="press_back_again_to_exit">Presiona de nuevo para salir</string>
+
+</resources>
