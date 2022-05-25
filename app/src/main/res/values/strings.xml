@@ -8,4 +8,11 @@
     <!-- Backpressed -->
     <string name="press_back_again_to_exit">Presiona de nuevo para salir</string>
 
+    <!--Tab titles  -->
+    <string name="tab_movies_popular">Populares</string>
+    <string name="tab_movies_now_playing">En cine</string>
+    <string name="tab_series_popular">Populares</string>
+    <string name="tab_series_airing_today">En emisión</string>
+
+
 </resources>

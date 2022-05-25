@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.arcode.eamovies.databinding.FragmentNotificationsBinding
+import com.arcode.eamovies.databinding.FragmentSeriesBinding
 
 class SerieFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentSeriesBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -20,12 +20,12 @@ class SerieFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         val serieViewModel =
             ViewModelProvider(this).get(SerieViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentSeriesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textNotifications
