@@ -8,6 +8,8 @@ plugins {
 }
 
 apply from: '../config/versions.gradle'
+apply from: '../config/variables.gradle'
+apply from: '../config/functions.gradle'
 
 android {
     compileSdk 32
@@ -23,8 +25,32 @@ android {
     }
 
     buildTypes {
-        release {
+        applicationVariants.all {
+            variant ->
+                variant.buildConfigField STRING, API, getCustomProperty(API)
+                variant.buildConfigField STRING, IMAGE_URL, getCustomProperty(IMAGE_URL)
+                variant.buildConfigField STRING, LANGUAGE, getCustomProperty(LANGUAGE)
+                variant.buildConfigField STRING, NOW_PLAYING, getCustomProperty(NOW_PLAYING)
+                variant.buildConfigField STRING, POPULAR, getCustomProperty(POPULAR)
+                variant.buildConfigField STRING, MOVIE_DETAILS, getCustomProperty(MOVIE_DETAILS)
+                variant.buildConfigField STRING, API_KEY, getCustomProperty(API_KEY)
+                variant.buildConfigField STRING, TV_POPULAR, getCustomProperty(TV_POPULAR)
+                variant.buildConfigField STRING, TV_AIRING, getCustomProperty(TV_AIRING)
+                variant.buildConfigField STRING, TV_DETAILS, getCustomProperty(TV_DETAILS)
+                variant.buildConfigField STRING, YOUTUBE_URL, getCustomProperty(YOUTUBE_URL)
+                variant.buildConfigField STRING, YOUTUBE_API_KEY, getCustomProperty(YOUTUBE_API_KEY)
+        }
+
+        debug {
             minifyEnabled false
+            signingConfig signingConfigs.debug
+            buildConfigField BOOLEAN, DEBUG_MODE, TRUE
+        }
+
+        release {
+            minifyEnabled true
+            buildConfigField BOOLEAN, DEBUG_MODE, FALSE
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
