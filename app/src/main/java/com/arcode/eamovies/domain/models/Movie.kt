@@ -1,8 +1,11 @@
 package com.arcode.eamovies.domain.models
 
+import android.os.Parcelable
 import com.arcode.eamovies.data.database.model.MovieEntity
 import com.arcode.eamovies.data.network.model.MovieModel
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 class Movie(
     val movieId: Int,
     val title: String,
@@ -10,7 +13,7 @@ class Movie(
     val voteCount: Int,
     val voteAverage: Double,
     val posterPath: String,
-)
+) : Parcelable
 
 fun MovieModel.toDomain() = Movie(
     movieId = movieId,
