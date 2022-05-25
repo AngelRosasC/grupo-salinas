@@ -1,9 +1,10 @@
-package com.arcode.eamovies
+package com.arcode.eamovies.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.arcode.eamovies.R
 import com.arcode.eamovies.databinding.ActivityMainBinding
 import com.arcode.eamovies.utils.constants.Constants.TIME_TO_EXIT
 import com.arcode.eamovies.utils.constants.extensions.showToast
