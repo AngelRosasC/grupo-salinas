@@ -82,4 +82,14 @@ object Constants {
      */
     const val TABLE_NAME_RESULT_VIDEO = "result_video"
 
+    /**
+     * Table name for Belongs_to_collection
+     */
+    const val TABLE_NAME_BELONGS_TO_COLLECTION = "belongs_to_collection"
+
+    /**
+     * Name extra for movie
+     */
+    const val EXTRA_MOVIE = "movie"
+
 }
