@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Weights -->
     <integer name="weight_1">1</integer>
+
+    <!-- Lines -->
+    <integer name="lines_1">1</integer>
 </resources>
