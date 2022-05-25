@@ -1,4 +1,4 @@
-package com.arcode.eamovies.utils.constants.extensions
+package com.arcode.eamovies.utils.extensions
 
 import android.content.Context
 import android.widget.Toast

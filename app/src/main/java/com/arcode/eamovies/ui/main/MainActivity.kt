@@ -7,7 +7,7 @@ import androidx.navigation.ui.NavigationUI
 import com.arcode.eamovies.R
 import com.arcode.eamovies.databinding.ActivityMainBinding
 import com.arcode.eamovies.utils.constants.Constants.TIME_TO_EXIT
-import com.arcode.eamovies.utils.constants.extensions.showToast
+import com.arcode.eamovies.utils.extensions.showToast
 
 class MainActivity : AppCompatActivity() {
 
