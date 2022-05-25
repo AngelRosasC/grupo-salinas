@@ -8,7 +8,9 @@ import com.arcode.eamovies.R
 import com.arcode.eamovies.databinding.ActivityMainBinding
 import com.arcode.eamovies.utils.constants.Constants.TIME_TO_EXIT
 import com.arcode.eamovies.utils.extensions.showToast
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
